@@ -21,6 +21,10 @@ col1, col2 = st.columns((3,3))
 
 #basic class working
 
+
+
+
+
 #st.write(algorithm)
 if main_page.categories=='Supervised Learning' and main_page.Algotypes=='Classification':
     if main_page.learntype=='Tutorials'and main_page.algorithm=='Logistic Regression':
@@ -41,16 +45,9 @@ if main_page.categories=='Supervised Learning' and main_page.Algotypes=='Classif
     elif main_page.learntype=='Tutorials' and main_page.algorithm=='K Means':
             Supervised_kmeans=Supervised_kmeans()
             Supervised_kmeans.kmeans_tut()     
-
-
-            
-  
-                
-      
     elif main_page.learntype=='Algorithm in Action' and main_page.algorithm=='Logistic Regression':
             logistic_param=supervised_logistic() 
             logistic_param.logiticaction()
-    
     elif main_page.learntype=='Algorithm in Action' and main_page.algorithm=='Support Vector Machine':
             supervied_svm1=supervised_svm()
             supervied_svm1.svm_inaction()
@@ -67,6 +64,43 @@ if main_page.categories=='Supervised Learning' and main_page.Algotypes=='Classif
             Supervised_kmeans=Supervised_kmeans()
             Supervised_kmeans.kmeans_inaction()     
 
+elif main_page.categories=='Supervised Learning' and main_page.Algotypes=='Regression':
+    if main_page.learntype=='Tutorials'and main_page.algorithm=='Logistic Regression':
+            logistic_param=supervised_logistic() 
+            logistic_param.logitic_tut()  
+    elif main_page.learntype=='Tutorials'and main_page.algorithm=='Support Vector Machine':
+            supervied_svm1=supervised_svm()
+            supervied_svm1.svm_tut()
+    elif main_page.learntype=='Tutorials' and main_page.algorithm=='Naive Bayes':
+            supervised_naive=supervised_naive()
+            supervised_naive.naive_tut()
+    elif main_page.learntype=='Tutorials' and main_page.algorithm=='Decession Tree':
+            supervised_dec_tree=Supervised_decession_tree()
+            supervised_dec_tree.dec_tree_tut()
+    elif main_page.learntype=='Tutorials' and main_page.algorithm=='K Nearset Neighpors KNN':
+            supervised_knn=Supervised_knn()
+            supervised_knn.knn_tut()
+    elif main_page.learntype=='Tutorials' and main_page.algorithm=='K Means':
+            Supervised_kmeans=Supervised_kmeans()
+            Supervised_kmeans.kmeans_tut()     
+    elif main_page.learntype=='Algorithm in Action' and main_page.algorithm=='Logistic Regression':
+            logistic_param=supervised_logistic() 
+            logistic_param.logiticaction()
+    elif main_page.learntype=='Algorithm in Action' and main_page.algorithm=='Support Vector Machine':
+            supervied_svm1=supervised_svm()
+            supervied_svm1.svm_inaction()
+    elif main_page.learntype=='Algorithm in Action' and main_page.algorithm=='Naive Bayes':
+            supervised_naive=supervised_naive()
+            supervised_naive.naive_inaction()
+    elif main_page.learntype=='Algorithm in Action' and main_page.algorithm=='Decession Tree':
+            supervised_dec_tree=Supervised_decession_tree()
+            supervised_dec_tree.dec_tree_inaction()
+    elif main_page.learntype=='Algorithm in Action' and main_page.algorithm=='K Nearset Neighpors KNN':
+            supervised_knn=Supervised_knn()
+            supervised_knn.knn_inaction()
+    elif main_page.learntype=='Algorithm in Action' and main_page.algorithm=='K Means':
+            Supervised_kmeans=Supervised_kmeans()
+            Supervised_kmeans.kmeans_inaction()     
 
 
 #'K Means'

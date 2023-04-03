@@ -32,12 +32,12 @@ class Supervised_kmeans(object):
 
             if Go_model_BTN:
 
-              graph=self.load_and_visualize()
+              graph=self.load_and_visualize( self.n_clustersint)
               components.html(graph.to_jshtml(), height=600,width=600,scrolling=True)
               
             
             if Generate_dataBTN:
-              graph=self.load_and_visualize()
+              graph=self.load_and_visualize(self.n_clustersint)
               components.html(graph.to_jshtml(), height=600,width=600,scrolling=True)   
                 
                 
@@ -173,7 +173,7 @@ class Supervised_kmeans(object):
 
    
 
-    def load_and_visualize(self):
+    def load_and_visualize(self,no_ofclusters):
         
         #change number of centroids************************
         points, _ = make_blobs(cluster_std=self.cluster_std, n_samples=self.nsamples, n_features=2, random_state=1,)
@@ -240,7 +240,7 @@ class Supervised_kmeans(object):
            # plt.show
             return [fig]
 
-        centroids = initialize_centroids(points, 7)
+        centroids = initialize_centroids(points,no_ofclusters)
         closest = closest_centroid(points, centroids)
         xlim = (points[:, 0].min(), points[:, 0].max())
         ylim = (points[:, 1].min(), points[:, 1].max())

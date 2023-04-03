@@ -18,14 +18,14 @@ class main_page(object):
         #sidebar Content
         st.sidebar.image('media/bedo2.png',width=50)
         st.sidebar.header("What do you want to learn today")
-        self.categories=st.sidebar.selectbox("Ml Category",options=['Supervised Learning','Unsupervised Learning','Reinforcement learning'])
+        self.categories=st.sidebar.selectbox("Ml Category",options=['Supervised Learning','Unsupervised Learning'])
         self.Algotypes=st.sidebar.selectbox("Agorithm Type",options=['Regression','Classification'])
 
         self.classification_algorithms=['Logistic Regression','K Nearset Neighpors KNN','K Means','Support Vector Machine','Decession Tree','Naive Bayes','Benchmark Algorithms']
         self.Regression_algorithms=['Logistic Regression','Support Vector Machine','Decession Tree','Naive Bayes','Benchmark Algorithms']
 
         self.algorithm=st.sidebar.radio('Algorithm',options=self.classification_algorithms if self.Algotypes=='Classification'else self.Regression_algorithms )
-        self.learntype=st.sidebar.radio("learning enviornment",options=['Tutorials','Algorithm in Action','Applied projects'])
+        self.learntype=st.sidebar.radio("learning enviornment",options=['Tutorials','Algorithm in Action'])
         new_title = '<p style="font-family:sans-serif; color:Blue; font-size: 24px;">'+ self.categories + " 👉" + self.Algotypes +" 👉" + self.algorithm + '</p>'
         st.markdown(new_title, unsafe_allow_html=True)
         
